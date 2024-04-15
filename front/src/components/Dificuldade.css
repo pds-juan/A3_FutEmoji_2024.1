@@ -1,0 +1,10 @@
+.dificuldade {
+    margin-top: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dificuldade h2, .dificuldade ul li {
+    color: #fff;
+}
