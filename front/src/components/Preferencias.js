@@ -1,23 +1,52 @@
 import React from 'react'
-import './Preferencias.css'
+import './css/Preferencias.css'
 
 const Preferencias = () => {
     return (
-        <div className='preferencias'>
-            <button>Brasileirão</button>
-            <button>LaLiga</button>
-            <button>Premier</button>
-            <br />
-            <br />
-            <button>Série A</button>
-            <button>Ligue 1</button>
-            <button>Bundesliga</button>
-            <br />
-            <br />
-            <br />
+        <div className='container-preferencias'>
 
-            <input type="text" placeholder='Outro' />
-            <button>Começar</button>
+            <h2 className='subtitulo-preferencias'>Escolha o campeonato:</h2>
+
+            <div className='selecao-campeonato'>
+                <div>
+                    <input type="radio" name='campeonato' id='brasileiro' />
+                    <label htmlFor="brasileiro">Brasileiro</label>
+                </div>
+
+                <div>
+                    <input type="radio" name='campeonato' id='laliga' />
+                    <label htmlFor="laliga">LaLiga</label>
+                </div>
+
+                <div>
+                    <input type="radio" name='campeonato' id='bundesliga' />
+                    <label htmlFor="bundesliga">Bundesliga</label>
+                </div>
+            </div>
+
+            <div className='selecao-campeonato'>
+                <div>
+                    <input type="radio" name='campeonato' id='premier' />
+                    <label htmlFor="premier">Premier</label>
+                </div>
+
+                <div>
+                    <input type="radio" name='campeonato' id='seriea' />
+                    <label htmlFor="seriea">Série A</label>
+                </div>
+
+                <div>
+                    <input type="radio" name='campeonato' id='ligue1' />
+                    <label htmlFor="ligue1">Ligue 1</label>
+                </div>
+            </div>
+
+            <div className="outro-campeonato">
+                <input type="text" placeholder='Ou digite outro aqui' />
+            </div>
+
+            <button className='botao-comecar'>COMEÇAR</button>
+
         </div>
     )
 }

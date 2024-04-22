@@ -1,0 +1,125 @@
+.container-preferencias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    color: #fff;
+
+    margin-bottom: 50px;
+}
+
+.subtitulo-preferencias {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.selecao-campeonato {
+    font-size: 28px;
+    font-weight: 100;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.selecao-campeonato > div{
+    display: flex;
+    align-items: center;
+}
+
+.outro-campeonato {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.outro-campeonato input {
+    font-size: 28px;
+    font-weight: 100;
+    color: #fff;
+
+    width: 100%;
+    padding: 5px;
+
+    text-align: center;
+
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    outline: 0;
+}
+
+.botao-comecar {
+    font-size: 32px;
+    font-weight: 500;
+
+    color: #fff;
+    background: none;
+
+    border: 2px solid #fff;
+    border-radius: 50px;
+
+    margin-top: 30px;
+    padding: 5px 20px;
+}
+
+@media (max-width: 768px) {
+    .container-preferencias {
+        gap: 2px;
+    
+        margin-bottom: 25px;
+    }
+    
+    .subtitulo-preferencias {
+        font-size: 26px;
+    }
+    
+    .selecao-campeonato {
+        font-size: 22px;
+        gap: 17px;
+    }
+    
+    .outro-campeonato {
+        margin: 3px 0;
+    }
+    
+    .outro-campeonato input {
+        font-size: 22px;
+        padding: 3px;
+    }
+    
+    .botao-comecar {
+        font-size: 22px;
+    
+        margin-top: 20px;
+        padding: 5px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-preferencias {
+        gap: 1px;
+    
+        margin-bottom: 20px;
+    }
+    
+    .subtitulo-preferencias {
+        font-size: 22px;
+    }
+    
+    .selecao-campeonato {
+        font-size: 20px;
+        gap: 15px;
+    }
+    
+    .outro-campeonato input {
+        font-size: 20px;
+    }
+    
+    .botao-comecar {
+        font-size: 16px;
+        font-weight: 500;
+    
+        margin-top: 15px;
+    }
+}

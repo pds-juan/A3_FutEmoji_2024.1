@@ -13,8 +13,9 @@ import './css/App.css'
 const App = () => {
     return (
         <div className='container'>
-            <Titulo />
-            <Jogar />
+            <SegundoTitulo />
+            <Dificuldade />
+            <Preferencias />
         </div>
     )
 }

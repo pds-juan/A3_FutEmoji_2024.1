@@ -1,15 +1,27 @@
 import React from 'react'
-import './Dificuldade.css'
+import './css/Dificuldade.css'
 
 const Dificuldade = () => {
     return (
-        <div className='dificuldade'>
-            <h2>Selecione a Dificuldade:</h2>
-            <ul>
-                <li>Fácil</li>
-                <li>Médio</li>
-                <li>Difícil</li>
-            </ul>
+        <div className='container-dificuldade'>
+
+            <h2 className='subtitulo-dificuldade'>Selecione a Dificuldade:</h2>
+
+            <div className='selecao-dificuldade'>
+                <input type="radio" name='dificuldade' id='facil' />
+                <label htmlFor="facil">Fácil</label>
+            </div>
+
+            <div className='selecao-dificuldade'>
+                <input type="radio" name='dificuldade' id='medio' />
+                <label htmlFor="medio">Médio</label>
+            </div>
+
+            <div className='selecao-dificuldade'>
+                <input type="radio" name='dificuldade' id='dificil' />
+                <label htmlFor="dificil">Difícil</label>
+            </div>
+
         </div>
     )
 }
