@@ -1,9 +1,9 @@
 import React from 'react'
-import './Titulo.css'
+import './css/Titulo.css'
 
 const Titulo = () => {
     return (
-        <h1 className='titulo'>FutEm⚽ji</h1>
+        <h1 className='titulo'>FutEmoji</h1>
     )
 }
 

@@ -1,11 +1,9 @@
 import React from 'react'
-import './Jogar.css'
+import './css/Jogar.css'
 
 const Jogar = () => {
     return (
-        <div className='btnJogar'>
-            <button className='btnJogarr'>JOGAR</button>
-        </div>
+        <button className='botao-jogar'>JOGAR</button>
     )
 }
 

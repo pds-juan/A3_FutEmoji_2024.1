@@ -13,8 +13,8 @@ import './css/App.css'
 const App = () => {
     return (
         <div className='container'>
-            <SegundoTitulo />
-            <Pergunta />
+            <Titulo />
+            <Jogar />
         </div>
     )
 }
