@@ -1,0 +1,78 @@
+.container-area-emoji {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #fff;
+}
+
+#seta-esquerda {
+    font-size: 100px;
+    margin-left: 50px;
+}
+
+#seta-direita {
+    font-size: 100px;
+    margin-right: 50px;
+}
+
+.area-emoji {
+    width: 40vw;
+    height: 40vh;
+
+    border: 3px solid #fff;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-emoji p {
+    font-size: 100px;
+}
+
+@media (max-width: 968px) {
+    .area-emoji p {
+        font-size: 82px;
+    }
+}
+
+@media (max-width: 768px) {    
+    .area-emoji {
+        width: 50vw;
+        height: 40vh;
+    
+        border-radius: 30px;
+    }
+
+    .area-emoji p {
+        font-size: 78px;
+    }
+
+    #seta-esquerda, #seta-direita {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .area-emoji {
+        width: 60vw;
+        height: 40vh;
+    }
+    
+    .area-emoji p {
+        font-size: 68px;
+    }
+
+    #seta-esquerda {
+        font-size: 50px;
+        margin-left: 25px;
+    }
+    
+    #seta-direita {
+        font-size: 50px;
+        margin-right: 25px;
+    }
+}

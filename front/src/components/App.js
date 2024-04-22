@@ -6,6 +6,8 @@ import SegundoTitulo from './SegundoTitulo'
 import Dificuldade from './Dificuldade'
 import Preferencias from './Preferencias'
 import Pergunta from './Pergunta'
+import AreaEmoji from './AreaEmoji'
+import Resposta from './Resposta'
 
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import './css/App.css'
@@ -14,8 +16,9 @@ const App = () => {
     return (
         <div className='container'>
             <SegundoTitulo />
-            <Dificuldade />
-            <Preferencias />
+            <Pergunta />
+            <AreaEmoji />
+            <Resposta />
         </div>
     )
 }
