@@ -1,0 +1,24 @@
+.container-pergunta {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-pergunta > p {
+    font-size: 32px;
+    font-weight: 300;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container-pergunta > p {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-pergunta > p {
+        font-size: 20px;
+    }
+}

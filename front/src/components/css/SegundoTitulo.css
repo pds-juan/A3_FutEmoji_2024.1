@@ -1,0 +1,17 @@
+.segundo-titulo {
+    font-size: 128px;
+    font-weight: 300;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .segundo-titulo {
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 576px) {
+    .segundo-titulo {
+        font-size: 58px;
+    }
+}
