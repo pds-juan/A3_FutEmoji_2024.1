@@ -4,6 +4,15 @@
     color: #fff;
 }
 
+.segundo-titulo span {
+    font-size: 96px;
+    margin: -15px;
+}
+
+.segundo-titulo a {
+    color: yellow;
+}
+
 @media (max-width: 768px) {
     .segundo-titulo {
         font-size: 64px;
