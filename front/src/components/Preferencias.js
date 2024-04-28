@@ -1,5 +1,6 @@
 import React from 'react'
 import './css/Preferencias.css'
+import { Link } from 'react-router-dom'
 
 const Preferencias = () => {
     return (
@@ -45,7 +46,11 @@ const Preferencias = () => {
                 <input type="text" placeholder='Ou digite outro aqui' />
             </div>
 
-            <button className='botao-comecar'>COMEÇAR</button>
+            <button className='botao-comecar'>
+                <Link to="/pergunta">
+                    COMEÇAR
+                </Link>
+            </button>
 
         </div>
     )
