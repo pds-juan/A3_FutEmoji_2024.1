@@ -1,5 +1,6 @@
 import React from 'react'
 import './css/Resposta.css'
+import { Link } from 'react-router-dom'
 
 const Resposta = () => {
     return (
@@ -8,7 +9,11 @@ const Resposta = () => {
                 <input type="text" placeholder='Digite sua resposta aqui' />
             </div>
 
-            <button className='botao-enviar'>ENVIAR</button>
+            <button className='botao-enviar'>
+                <Link>
+                    ENVIAR
+                </Link>
+            </button>
         </div>
     )
 }

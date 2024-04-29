@@ -21,7 +21,7 @@
 
     background: none;
     border: 2px solid #fff;
-    border-radius: 30px;
+    border-radius: 25px;
     outline: 0;
 }
 
@@ -33,24 +33,32 @@
     background: none;
 
     border: 2px solid #fff;
-    border-radius: 50px;
+    border-radius: 25px;
 
     margin-top: 20px;
     padding: 5px 20px;
 }
 
+.botao-enviar a {
+    color: yellow;
+}
+
 @media (max-width: 768px) {
-    
+
     .campo-resposta input {
         font-size: 22px;
         padding: 3px;
+
+        border-radius: 18px;
     }
-    
+
     .botao-enviar {
         font-size: 22px;
-    
+
         margin-top: 15px;
         padding: 5px 15px;
+
+        border-radius: 20px;
     }
 }
 
@@ -61,12 +69,13 @@
 
     .campo-resposta input {
         font-size: 20px;
+        border-radius: 15px;
     }
-    
+
     .botao-enviar {
         font-size: 16px;
         font-weight: 500;
-    
-        margin-top: 10px;
+
+        border-radius: 16px;
     }
 }

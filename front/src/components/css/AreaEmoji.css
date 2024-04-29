@@ -19,7 +19,7 @@
 
 .area-emoji {
     width: 40vw;
-    height: 40vh;
+    height: 30vh;
 
     border: 3px solid #fff;
     border-radius: 50px;
@@ -33,46 +33,97 @@
     font-size: 100px;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1120px) {
     .area-emoji p {
-        font-size: 82px;
+        font-size: 85px;
     }
 }
 
-@media (max-width: 768px) {    
+@media (max-width: 968px) {
     .area-emoji {
-        width: 50vw;
-        height: 40vh;
-    
-        border-radius: 30px;
+        width: 40vw;
+        height: 30vh;
     }
 
     .area-emoji p {
-        font-size: 78px;
+        font-size: 72px;
+    }
+}
+
+@media (max-width: 840px) {
+    .area-emoji p {
+        font-size: 68px;
     }
 
-    #seta-esquerda, #seta-direita {
+    #seta-esquerda,
+    #seta-direita {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .area-emoji {
+        border-radius: 40px;
+        width: 40vw;
+        height: 25vh;
+    }
+
+    .area-emoji p {
+        font-size: 62px;
+    }
+
+    #seta-esquerda,
+    #seta-direita {
         font-size: 60px;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 680px) {
     .area-emoji {
-        width: 60vw;
-        height: 40vh;
+        width: 40vw;
+        height: 20vh;
     }
-    
+
     .area-emoji p {
-        font-size: 68px;
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 576px) {
+    .area-emoji p {
+        font-size: 48px;
     }
 
     #seta-esquerda {
         font-size: 50px;
         margin-left: 25px;
     }
-    
+
     #seta-direita {
         font-size: 50px;
         margin-right: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .area-emoji {
+        width: 40vw;
+        height: 15vh;
+        border-radius: 30px;
+    }
+
+    .area-emoji p {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 430px) {
+    .area-emoji p {
+        font-size: 32px;
+    }
+
+    #seta-esquerda,
+    #seta-direita {
+        font-size: 40px;
     }
 }
