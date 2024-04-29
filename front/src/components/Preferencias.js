@@ -6,7 +6,7 @@ const Preferencias = () => {
     return (
         <div className='container-preferencias'>
 
-            <h2 className='subtitulo-preferencias'>Escolha o campeonato:</h2>
+            <h2 className='subtitulo-preferencias'>Escolha o Campeonato:</h2>
 
             <div className='selecao-campeonato'>
                 <div>
@@ -15,8 +15,8 @@ const Preferencias = () => {
                 </div>
 
                 <div>
-                    <input type="radio" name='campeonato' id='laliga' />
-                    <label htmlFor="laliga">LaLiga</label>
+                    <input type="radio" name='campeonato' id='seriea' />
+                    <label htmlFor="seriea">Série A</label>
                 </div>
 
                 <div>
@@ -32,8 +32,8 @@ const Preferencias = () => {
                 </div>
 
                 <div>
-                    <input type="radio" name='campeonato' id='seriea' />
-                    <label htmlFor="seriea">Série A</label>
+                    <input type="radio" name='campeonato' id='laliga' />
+                    <label htmlFor="laliga">LaLiga</label>
                 </div>
 
                 <div>

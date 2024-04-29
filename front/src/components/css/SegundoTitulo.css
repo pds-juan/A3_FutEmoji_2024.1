@@ -2,6 +2,9 @@
     font-size: 128px;
     font-weight: 300;
     color: #fff;
+
+    display: flex;
+    align-items: center;
 }
 
 .segundo-titulo span {
@@ -17,10 +20,20 @@
     .segundo-titulo {
         font-size: 64px;
     }
+
+    .segundo-titulo span {
+        font-size: 54px;
+        margin: -10px;
+    }
 }
 
 @media (max-width: 576px) {
     .segundo-titulo {
         font-size: 58px;
+    }
+
+    .segundo-titulo span {
+        font-size: 48px;
+        margin: -8px;
     }
 }

@@ -7,19 +7,21 @@ const Dificuldade = () => {
 
             <h2 className='subtitulo-dificuldade'>Selecione a Dificuldade:</h2>
 
-            <div className='selecao-dificuldade'>
-                <input type="radio" name='dificuldade' id='facil' />
-                <label htmlFor="facil">Fácil</label>
-            </div>
+            <div className='selecao'>
+                <div className='selecao-dificuldade'>
+                    <input type="radio" name='dificuldade' id='facil' className='teste' />
+                    <label htmlFor="facil">Fácil</label>
+                </div>
 
-            <div className='selecao-dificuldade'>
-                <input type="radio" name='dificuldade' id='medio' />
-                <label htmlFor="medio">Médio</label>
-            </div>
+                <div className='selecao-dificuldade'>
+                    <input type="radio" name='dificuldade' id='medio' />
+                    <label htmlFor="medio">Médio</label>
+                </div>
 
-            <div className='selecao-dificuldade'>
-                <input type="radio" name='dificuldade' id='dificil' />
-                <label htmlFor="dificil">Difícil</label>
+                <div className='selecao-dificuldade'>
+                    <input type="radio" name='dificuldade' id='dificil' />
+                    <label htmlFor="dificil">Difícil</label>
+                </div>
             </div>
 
         </div>
