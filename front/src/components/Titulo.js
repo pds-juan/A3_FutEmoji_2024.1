@@ -3,7 +3,9 @@ import './css/Titulo.css'
 
 const Titulo = () => {
     return (
-        <h1 className='titulo'>FutEmoji</h1>
+        <h1 className='titulo'>
+            <a>Fut</a>Em<span>⚽</span>ji
+        </h1>
     )
 }
 
