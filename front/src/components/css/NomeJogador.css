@@ -1,0 +1,52 @@
+.container-jogador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    color: #fff;
+
+    margin-bottom: 50px;
+}
+
+.subtitulo-jogador {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.input-jogador {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.input-jogador input {
+    font-size: 28px;
+    font-weight: 100;
+    color: #fff;
+
+    padding: 5px;
+    text-align: center;
+
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    outline: 0;
+}
+
+.botao-proximo {
+    font-size: 32px;
+    font-weight: 500;
+
+    color: #fff;
+    background: none;
+
+    border: 2px solid #fff;
+    border-radius: 25px;
+
+    padding: 5px 20px;
+}
+
+.botao-proximo a {
+    color: yellow;
+}
