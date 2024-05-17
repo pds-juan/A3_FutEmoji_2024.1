@@ -12,6 +12,7 @@ import Preferencias from './components/Preferencias'
 import Pergunta from './components/Pergunta'
 import AreaEmoji from './components/AreaEmoji'
 import Resposta from './components/Resposta'
+import NomeJogador from './components/NomeJogador';
 
 function AppRoutes() {
   return (
@@ -19,8 +20,9 @@ function AppRoutes() {
       <Routes>
 
         <Route path="/" element={<div className='container'><Titulo /><Jogar /></div>} />
-        <Route path="/dificuldade" element={<div className='container'><SegundoTitulo /><Dificuldade /><Preferencias /></div>} />
-        <Route path="/pergunta" element={<div className='container'><SegundoTitulo /><Pergunta /><AreaEmoji /><Resposta /></div>} />
+        <Route path="/jogador" element={<div className='container'><SegundoTitulo /><NomeJogador /></div>} />
+        <Route path="/configuracoes" element={<div className='container'><SegundoTitulo /><Dificuldade /><Preferencias /></div>} />
+        <Route path="/jogar" element={<div className='container'><SegundoTitulo /><Pergunta /><AreaEmoji /><Resposta /></div>} />
 
         <Route path="*" element={<div>Página não encontrada</div>} />
 
