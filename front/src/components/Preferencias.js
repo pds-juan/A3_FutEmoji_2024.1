@@ -47,7 +47,7 @@ const Preferencias = () => {
             </div>
 
             <button className='botao-comecar'>
-                <Link to="/pergunta">
+                <Link to="/jogar">
                     COMEÇAR
                 </Link>
             </button>

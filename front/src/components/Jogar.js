@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Jogar = () => {
     return (
         <button className='botao-jogar'>
-            <Link to="/dificuldade">
+            <Link to="/jogador">
                 JOGAR
             </Link>
         </button>
