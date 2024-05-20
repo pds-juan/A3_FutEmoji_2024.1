@@ -10,14 +10,14 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.post('/teste', async (req, res) => {
+app.post('/conversar', async (req, res) => {
     const { prompt } = req.body;
 
     const model = 'gpt-3.5-turbo';
     const role = 'user';
     const max_tokens = 50;
 
-    const promptCompleto = `você vai me enviar um conjunto de 3 emojis, a partir desses emojis, preciso adivinhar o time ${prompt}.`
+    const promptCompleto = `Você vai me enviar um conjunto de 3 emojis, a partir desses emojis, preciso adivinhar o time de futebol que se trata. Porém, segue algumas regras: você NÃO deve utilizar emojis que possuem letras; você NÃO pode utilizar emojis que só possuem cores; seja criativo nos emojis; quero emojis que representem os times, não escolha emojis aleatórios; quero que utilize uma base de dados vasta de emojis, o céu é o limite; não quero repetição de times; tente sempre usar emojis diferentes para cada time. ${prompt}`;
 
     const completion = await openai.chat.completions.create({
         messages: [{ role: role, content: promptCompleto }],
@@ -30,19 +30,35 @@ app.post('/teste', async (req, res) => {
     try {
         const connection = await db;
 
-        await connection.execute('INSERT INTO tabela_logs (data_consulta, pergunta, resposta) VALUES (?, ?, ?)', [new Date(), promptCompleto, resposta]);
+        await connection.execute('INSERT INTO consultas (data_consulta, pergunta, resposta) VALUES (?, ?, ?)', [new Date(), promptCompleto, resposta]);
+
+        res.json({ promptCompleto, resposta });
+
+    } catch (error) {
+        console.error('Erro ao incluir as informações no banco de dados:', error);
+        res.status(500).send('Um erro inesperado ocorreu ao incluir as informações no banco de dados.');
+    }
+});
+
+app.get('/consultar', async (req, res) => {
+
+    try {
+        const connection = await db;
 
         const [jogadores] = await connection.execute('SELECT * FROM jogadores');
         const [campeonatos] = await connection.execute('SELECT * FROM campeonatos');
         const [pontuacao] = await connection.execute('SELECT * FROM pontuacao');
-        const [logs] = await connection.execute('SELECT * FROM tabela_logs');
+        const [consultas] = await connection.execute('SELECT * FROM consultas');
 
-        console.log("\nJogadores:\n" , jogadores, "\n\nCampeonatos:\n", campeonatos,"\n\nPontuação:\n", pontuacao,"\n\nConsultas:\n", logs);
+        const [ultimaConversa] = await connection.execute('SELECT pergunta, resposta FROM consultas ORDER BY data_consulta DESC LIMIT 1');
 
-        res.json(resposta);
+        console.log("\nJogadores:\n", jogadores, "\n\nCampeonatos:\n", campeonatos, "\n\nPontuação:\n", pontuacao, "\n\nConsultas:\n", consultas);
+
+        res.json({ ultimaConversa });
 
     } catch (error) {
         console.error('Erro ao realizar a consulta:', error);
+        res.status(500).send('Um erro inesperado ocorreu ao realizar a consulta.');
     }
 });
 
