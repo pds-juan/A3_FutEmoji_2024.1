@@ -11,13 +11,13 @@ app.use(express.json());
 app.use(cors());
 
 app.post('/conversar', async (req, res) => {
-    const { prompt } = req.body;
+    // const { prompt } = req.body;
 
     const model = 'gpt-3.5-turbo';
     const role = 'user';
     const max_tokens = 50;
 
-    const promptCompleto = `Você vai me enviar um conjunto de 3 emojis, a partir desses emojis, preciso adivinhar o time de futebol que se trata. Porém, segue algumas regras: você NÃO deve utilizar emojis que possuem letras; você NÃO pode utilizar emojis que só possuem cores; seja criativo nos emojis; quero emojis que representem os times, não escolha emojis aleatórios; quero que utilize uma base de dados vasta de emojis, o céu é o limite; não quero repetição de times; tente sempre usar emojis diferentes para cada time. ${prompt}`;
+    const promptCompleto = `Você vai me enviar um conjunto de 3 emojis, a partir desses emojis, preciso adivinhar o time de futebol que se trata. Porém, segue algumas regras: você NÃO deve utilizar emojis que possuem letras; você NÃO pode utilizar emojis que só possuem cores; seja criativo nos emojis; quero emojis que representem os times, não escolha emojis aleatórios; quero que utilize uma base de dados vasta de emojis, o céu é o limite; não quero repetição de times; tente sempre usar emojis diferentes para cada time.` // ${prompt}`;
 
     const completion = await openai.chat.completions.create({
         messages: [{ role: role, content: promptCompleto }],
