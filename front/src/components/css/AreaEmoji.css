@@ -1,20 +1,10 @@
 .container-area-emoji {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     color: #fff;
-}
-
-#seta-esquerda {
-    font-size: 100px;
-    margin-left: 50px;
-}
-
-#seta-direita {
-    font-size: 100px;
-    margin-right: 50px;
 }
 
 .area-emoji {
@@ -54,11 +44,6 @@
     .area-emoji p {
         font-size: 68px;
     }
-
-    #seta-esquerda,
-    #seta-direita {
-        font-size: 80px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -70,11 +55,6 @@
 
     .area-emoji p {
         font-size: 62px;
-    }
-
-    #seta-esquerda,
-    #seta-direita {
-        font-size: 60px;
     }
 }
 
@@ -93,16 +73,6 @@
     .area-emoji p {
         font-size: 48px;
     }
-
-    #seta-esquerda {
-        font-size: 50px;
-        margin-left: 25px;
-    }
-
-    #seta-direita {
-        font-size: 50px;
-        margin-right: 25px;
-    }
 }
 
 @media (max-width: 500px) {
@@ -120,10 +90,5 @@
 @media (max-width: 430px) {
     .area-emoji p {
         font-size: 32px;
-    }
-
-    #seta-esquerda,
-    #seta-direita {
-        font-size: 40px;
     }
 }
