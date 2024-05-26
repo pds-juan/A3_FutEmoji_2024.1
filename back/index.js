@@ -24,13 +24,13 @@ app.post('/salvar-nome', async (req, res) => {
 });
 
 app.post('/conversar', async (req, res) => {
-    // const { prompt } = req.body;
+    const { prompt } = req.body;
 
     const model = 'gpt-3.5-turbo';
     const role = 'user';
     const max_tokens = 50;
 
-    const promptCompleto = `Você vai me enviar um conjunto de 3 emojis, que representam um time de futebol. Seguem algumas regras: você NÃO deve utilizar emojis que possuem letras; você NÃO pode utilizar emojis que só possuem cores; seja criativo nos emojis; quero emojis que representem os times, não use emojis aleatórios; quero que utilize uma base vasta de emojis, o céu é o limite; não quero repetição de times; use sempre emojis diferentes para cada time; escolha apenas times de campeonatos ingleses; APENAS UM TIME POR VEZ. A resposta deve ser exatamente no seguinte padrão, nada além disso: 'emoji 1''emoji 2''emoji 3''nome do time que os emojis representam'.` // ${prompt}`;
+    const promptCompleto = `Você vai me enviar um conjunto de 3 emojis, que representam um time de futebol. Seguem algumas regras: você NÃO deve utilizar emojis que possuem letras; você NÃO pode utilizar emojis que só possuem cores; seja criativo nos emojis; quero emojis que representem os times, não use emojis aleatórios; quero que utilize uma base vasta de emojis, o céu é o limite; não quero repetição de times; use sempre emojis diferentes para cada time; escolha apenas times do campeonato ${prompt}; APENAS UM TIME POR VEZ. A resposta deve ser exatamente no seguinte padrão, nada além disso: 'emoji 1''emoji 2''emoji 3''nome do time que os emojis representam'.`
 
     const completion = await openai.chat.completions.create({
         messages: [{ role: role, content: promptCompleto }],
