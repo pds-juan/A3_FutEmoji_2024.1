@@ -50,3 +50,63 @@
 .botao-proximo a {
     color: yellow;
 }
+
+
+@media (max-width: 768px) {
+    .container-jogador {
+        gap: 1px;
+        margin-top: -2px;
+    }
+
+    .subtitulo-jogador {
+        font-size: 22px;
+
+    }
+
+    .input-jogador input {
+        font-size: 22px;
+        padding: 3px;
+
+        border-radius: 18px;
+    }
+
+    .botao-proximo {
+        font-size: 18px;
+        border-radius: 20px;
+        padding: 5px 15px;
+    }
+
+    .input-jogador {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-jogador {
+        gap: 1px;
+        margin-top: -5px;
+    }
+
+    .subtitulo-jogador {
+        font-size: 18px;
+
+    }
+
+    .input-jogador input {
+        font-size: 18px;
+
+        border-radius: 15px;
+    }
+
+    .botao-proximo {
+        font-size: 15px;
+        border-radius: 20px;
+        padding: 5px 15px;
+    }
+
+    .input-jogador {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
