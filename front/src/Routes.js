@@ -1,18 +1,17 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import '@fortawesome/fontawesome-free/css/all.min.css'
 import './App.css'
 
 import Titulo from './components/Titulo'
 import Jogar from './components/Jogar'
 import SegundoTitulo from './components/SegundoTitulo'
+import NomeJogador from './components/NomeJogador';
 import Dificuldade from './components/Dificuldade'
 import Preferencias from './components/Preferencias'
 import Pergunta from './components/Pergunta'
 import AreaEmoji from './components/AreaEmoji'
 import Resposta from './components/Resposta'
-import NomeJogador from './components/NomeJogador';
 
 function AppRoutes() {
   return (
