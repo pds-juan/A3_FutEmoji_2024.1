@@ -7,9 +7,6 @@ CREATE TABLE IF NOT EXISTS jogadores (
     nome VARCHAR(45) NOT NULL
 );
 
-INSERT INTO jogadores (nome) VALUES
-('Juan');
-
 CREATE TABLE IF NOT EXISTS campeonatos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(45) NOT NULL
@@ -46,6 +43,6 @@ CREATE TABLE IF NOT EXISTS pontuacao (
 CREATE TABLE IF NOT EXISTS consultas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     data_consulta DATETIME,
-    pergunta VARCHAR(550),
-    resposta VARCHAR(255)
+    pergunta VARCHAR(650),
+    resposta VARCHAR(100)
 );
