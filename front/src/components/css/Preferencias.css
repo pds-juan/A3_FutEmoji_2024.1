@@ -66,11 +66,35 @@
     color: yellow;
 }
 
+@media (max-width: 1366px) {
+    .container-preferencias {
+        gap: 3px;
+
+        margin-bottom: 20px;
+    }
+
+    .subtitulo-preferencias {
+        font-size: 28px;
+    }
+
+    .selecao-campeonato {
+        font-size: 25px;
+    }
+
+    .outro-campeonato {
+        margin-bottom: 20px;
+    }
+
+    .outro-campeonato input {
+        font-size: 25px;
+    }
+}
+
 @media (max-width: 768px) {
     .container-preferencias {
         gap: 2px;
 
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
     .subtitulo-preferencias {
@@ -83,7 +107,7 @@
     }
 
     .outro-campeonato {
-        margin: 3px 0;
+        margin: 0;
     }
 
     .outro-campeonato input {
