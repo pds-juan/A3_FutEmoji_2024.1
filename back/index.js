@@ -46,7 +46,7 @@ app.post('/conversar', async (req, res) => {
     try {
         const connection = await db;
 
-        await connection.execute('INSERT INTO consultas (data_consulta, pergunta, resposta) VALUES (?, ?, ?)', [new Date(), promptCompleto, resposta]);
+        await connection.execute('INSERT INTO consultas (data_consulta, pergunta, resposta, emojis, nome_time) VALUES (?, ?, ?, ?, ?)', [new Date(), promptCompleto, resposta, emojis, nomeTime]);
 
         res.json({ promptCompleto, resposta });
 
@@ -56,8 +56,20 @@ app.post('/conversar', async (req, res) => {
     }
 });
 
-app.get('/consultar', async (req, res) => {
+app.get('/emojis', async (req, res) => {
+    try {
+        const connection = await db;
+        const [emojisConsulta] = await connection.execute('SELECT emojis FROM consultas ORDER BY data_consulta DESC LIMIT 1');
+        const emojis = emojisConsulta[0].emojis;
+        res.json({ emojis });
 
+    } catch (error) {
+        console.log('Erro ao obter os emojis:', error);
+        res.status(500).send('Um erro inesperado ocorreu ao obter os emojis.');
+    }
+});
+
+app.get('/consultar', async (req, res) => {
     try {
         const connection = await db;
 
