@@ -44,5 +44,7 @@ CREATE TABLE IF NOT EXISTS consultas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     data_consulta DATETIME,
     pergunta VARCHAR(650),
-    resposta VARCHAR(100)
+    resposta VARCHAR(100),
+    emojis VARCHAR(10),
+    nome_time VARCHAR(45)
 );
