@@ -13,10 +13,10 @@ const Preferencias = () => {
             alert('Selecione um campeonato ou digite outro!');
             return
         } else {
+            const campeonatoSelecionado = campeonato || outroCampeonato;
+            await axios.post('/conversar', { prompt: campeonatoSelecionado });
             navigate('/jogar');
         }
-        const campeonatoSelecionado = campeonato || outroCampeonato;
-        await axios.post('/conversar', { prompt: campeonatoSelecionado });
     };
 
     return (
