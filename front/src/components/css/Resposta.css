@@ -29,18 +29,15 @@
     font-size: 32px;
     font-weight: 500;
 
-    color: #fff;
+    color: yellow;
     background: none;
+    cursor: pointer;
 
     border: 2px solid #fff;
     border-radius: 25px;
 
     margin-top: 20px;
     padding: 5px 20px;
-}
-
-.botao-enviar a {
-    color: yellow;
 }
 
 @media (max-width: 768px) {
