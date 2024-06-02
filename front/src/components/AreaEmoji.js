@@ -15,7 +15,7 @@ const AreaEmoji = () => {
             }
         };
         pegarEmojis();
-    }, []);
+    });
 
     return (
         <div className="container-area-emoji">
