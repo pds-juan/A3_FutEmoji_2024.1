@@ -41,7 +41,7 @@ app.post('/conversar', async (req, res) => {
     const resposta = completion.choices[0].message.content;
     const respostaFiltrada = resposta.replace(/\s/g, '');
     const emojis = respostaFiltrada.substring(0, 6);
-    const nomeTime = respostaFiltrada.substring(6);
+    const nomeTime = respostaFiltrada.substring(6).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
     try {
         const connection = await db;
@@ -59,8 +59,8 @@ app.post('/conversar', async (req, res) => {
 app.get('/emojis', async (req, res) => {
     try {
         const connection = await db;
-        const [emojisConsulta] = await connection.execute('SELECT emojis FROM consultas ORDER BY data_consulta DESC LIMIT 1');
-        const emojis = emojisConsulta[0].emojis;
+        const [consultaEmojis] = await connection.execute('SELECT emojis FROM consultas ORDER BY data_consulta DESC LIMIT 1');
+        const emojis = consultaEmojis[0].emojis;
         res.json({ emojis });
 
     } catch (error) {
@@ -68,6 +68,19 @@ app.get('/emojis', async (req, res) => {
         res.status(500).send('Um erro inesperado ocorreu ao obter os emojis.');
     }
 });
+
+app.get('/resposta', async (req, res) => {
+    try {
+        const connection = await db;
+        const [consultaNomeTime] = await connection.execute('SELECT nome_time FROM consultas ORDER BY data_consulta DESC LIMIT 1');
+        const nomeTime = consultaNomeTime[0].nome_time;
+        res.json({ nomeTime });
+
+    } catch (error) {
+        console.log('Erro ao obter a resposta:', error);
+        res.status(500).send('Um erro inesperado ocorreu ao obter a resposta.');
+    }
+})
 
 app.get('/consultar', async (req, res) => {
     try {
