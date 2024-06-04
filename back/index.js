@@ -23,6 +23,20 @@ app.post('/salvar-nome', async (req, res) => {
     }
 });
 
+app.post('/salvar-dificuldade', async (req, res) => {
+    const { nivelDificuldade } = req.body;
+
+    try {
+        const connection = await db;
+        await connection.execute('INSERT INTO dificuldade (nivel) VALUES (?)', [nivelDificuldade]);
+        res.json({ nivelDificuldade });
+
+    } catch (error) {
+        console.log('Erro ao incluir a dificuldade:', error);
+        res.status(500).send('Um erro inesperado ocorreu ao incluir a dificuldade.');
+    }
+});
+
 app.post('/conversar', async (req, res) => {
     const { prompt } = req.body;
 
@@ -53,6 +67,20 @@ app.post('/conversar', async (req, res) => {
     } catch (error) {
         console.log('Erro ao incluir as informações no banco de dados:', error);
         res.status(500).send('Um erro inesperado ocorreu ao incluir as informações no banco de dados.');
+    }
+});
+
+app.get('/obter-dificuldade', async (req, res) => {
+
+    try {
+        const connection = await db;
+        const [dificuldadeSelecionada] = await connection.execute('SELECT nivel FROM dificuldade ORDER BY id DESC LIMIT 1');
+        const dificuldade = dificuldadeSelecionada[0].nivel;
+        res.json({ dificuldade });
+
+    } catch (error) {
+        console.log('Erro ao obter a dificuldade:', error);
+        res.status(500).send('Um erro inesperado ocorreu ao obter a dificuldade.');
     }
 });
 
