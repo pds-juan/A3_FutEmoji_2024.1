@@ -22,14 +22,8 @@ INSERT INTO campeonatos (nome) VALUES
 
 CREATE TABLE IF NOT EXISTS dificuldade (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nivel VARCHAR(13) NOT NULL,
-    valor INT NOT NULL
+    nivel VARCHAR(13) NOT NULL
 );
-
-INSERT INTO dificuldade (nivel, valor) VALUES
-('Fácil', 1),
-('Médio', 2),
-('Difícil', 3);
 
 CREATE TABLE IF NOT EXISTS pontuacao (
     id INT AUTO_INCREMENT PRIMARY KEY,
